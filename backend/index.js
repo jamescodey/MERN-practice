@@ -13,13 +13,13 @@ app.use(express.json());
 // allows all origins with default of cors(*)
 app.use(cors());
 // allows custom origins
-app.use(
-    cors({
-        origin: 'http://localhost:3000',
-        methods: ['GET', 'PUT', 'POST', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-)
+// app.use(
+//     cors({
+//         origin: 'http://localhost:3000',
+//         methods: ['GET', 'PUT', 'POST', 'DELETE'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// )
 
 app.get('/', (request, response) => {
     console.log(request);
