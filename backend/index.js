@@ -1,8 +1,8 @@
 import express, { request } from "express";
-import { PORT, mongoDBURL } from './config.js';
+import { PORT, mongoDBURL } from "./config.js";
 import mongoose from "mongoose";
-import booksRoute from './routes/booksRoute.js';
-import cors from 'cors';
+import booksRoute from "./routes/booksRoute.js";
+import cors from "cors";
 
 const app = express();
 
@@ -21,17 +21,17 @@ app.use(cors());
 //     })
 // )
 
-app.use('/books', booksRoute);
+app.use("/books", booksRoute);
 
 // Connection to Mongo DB
 mongoose
-    .connect(mongoDBURL)
-    .then(() => {
-        console.log("App is connected to database.");
-        app.listen(PORT, () => {
-            console.log(`App is listening to port ${PORT}`);
-        });
-    })
-    .catch((error) => {
-        console.log(error.message);
-    })
+  .connect(mongoDBURL)
+  .then(() => {
+    console.log("App is connected to database.");
+    app.listen(PORT, () => {
+      console.log(`App is listening to port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.log(error.message);
+  });
