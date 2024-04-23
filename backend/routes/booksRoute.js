@@ -36,7 +36,7 @@ router.get('/', async (request, response) => {
         return response.status(200).json(books);
     } catch (error) {
         console.log(error.message);
-        response.status(500).send({ message: error.message});
+        response.status(500).send({ message: error.message });
     }
 });
 
@@ -48,7 +48,7 @@ router.get('/:id', async (request, response) => {
         return response.status(200).json(books);
     } catch (error) {
         console.log(error.message);
-        response.status(500).send({ message: error.message});
+        response.status(500).send({ message: error.message });
     }
 });
 
@@ -73,7 +73,7 @@ router.put('/:id', async (request, response) => {
         return response.status(200).send({ message: "Book updated successfully!" });
     } catch (error) {
         console.log(error.message);
-        response.status(500).send({message: error.message});
+        response.status(500).send({ message: error.message });
     }
 });
 
@@ -89,7 +89,7 @@ router.delete('/:id', async (request, response) => {
         return response.status(200).send({ message: "Book deleted successfully!" });
     } catch (error) {
         console.log(error.message);
-        response.status(500).send({message: error.message});
+        response.status(500).send({ message: error.message });
     }
 });
 
